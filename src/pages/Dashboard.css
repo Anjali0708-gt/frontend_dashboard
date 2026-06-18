@@ -1,0 +1,54 @@
+.dashboard {
+  padding: 30px;
+}
+
+.dashboard-header {
+  margin-bottom: 30px;
+}
+
+.dashboard-header h1 {
+  font-size: 32px;
+  color: #111827;
+}
+
+.dashboard-header p {
+  color: #6b7280;
+  margin-top: 5px;
+}
+
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+.dashboard-header {
+  background: linear-gradient(
+    135deg,
+    #111827,
+    #1e3a8a
+  );
+  
+  padding: 30px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dashboard-header h1 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #fbbf24;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.dashboard-header p {
+  margin-top: 8px;
+  font-size: 16px;
+  color: #d1d5db;
+}

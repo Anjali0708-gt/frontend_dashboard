@@ -8,30 +8,44 @@ import Appointments from "./pages/Appointment";
 import Login from "./pages/Login";
 
 import AdminLayout from "./layouts/Adminlayout";
+import PublicRoute from "./routes/PublicRoute";
+import PrivateRoute from "./routes/PrivateRoute";
 
 function App() {
   return (
-    <>
-    <Login/>
     <Routes>
 
-      {/* Public Route */}
-      <Route path="/login" element={<Login />} />
+      {/* PUBLIC */}
+      <Route
+        path="/login"
+        element={
+          <PublicRoute>
+            <Login />
+          </PublicRoute>
+        }
+      />
 
-      {/* Admin Layout Route (All dashboard pages inside it) */}
-      <Route path="/" element={<AdminLayout />}>
-        
-        {/* Nested Routes (these go inside Outlet) */}
+      {/* PROTECTED */}
+      <Route
+        path="/"
+        element={
+          <PrivateRoute>
+            <AdminLayout />
+          </PrivateRoute>
+        }
+      >
+        {/* Default page for "/" */}
+        <Route index element={<Dashboard />} />
+
+        {/* Other pages */}
         <Route path="dashboard" element={<Dashboard />} />
         <Route path="customers" element={<Customers />} />
         <Route path="orders" element={<Orders />} />
         <Route path="measurements" element={<Measurements />} />
         <Route path="appointments" element={<Appointments />} />
-
       </Route>
 
     </Routes>
-    </>
   );
 }
 

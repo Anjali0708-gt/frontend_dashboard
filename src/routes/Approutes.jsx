@@ -10,12 +10,14 @@ import Charts from "../components/Charts";
 import Cards from '../components/Cards';
 import Login from "../pages/Login"
 import Sidebar from "../components/Sidebar";
+import Home from "../pages/Home/Home";
 
 import AdminLayout from "./layouts/AdminLayout";
 
 function App() {
   return (
         <Routes>
+          <Route path="/" element={<Home />} />
             {/* public route */}
             <Route path="/Login" element={<Login/>}/>
             {/* admin  */}
