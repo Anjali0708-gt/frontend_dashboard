@@ -2,6 +2,7 @@ import React from "react";
 import StatCard from "../components/StatCard";
 import RecentOrder from "../components/RecentOrder";
 import AppointmentList from "../components/AppointmentList";
+import QuickAction from "../components/QuickAction";
 import "./Dashboard.css";
 
 function Dashboard() {
@@ -68,27 +69,32 @@ function Dashboard() {
   
 
   return (
-    <div className="dashboard">
-      <div className="dashboard-header">
-        <h1>Dashboard</h1>
-        <p>Welcome back to VK Stitch Studio 👋</p>
-      </div>
-
-      <div className="stats-container">
-        {statsData.map((item) => (
-          <StatCard
-            key={item.id}
-            title={item.title}
-            value={item.value}
-          />
-        ))}
-        
-      </div>
-      <RecentOrder orders={recentOrders}/>
-      <br />
-      <AppointmentList Appointment={appointments}/>
+  <div className="dashboard">
+    <div className="dashboard-header">
+      <h1>Dashboard</h1>
+      <p>Welcome back to VK Stitch Studio 👋</p>
     </div>
-  );
+
+    <div className="stats-container">
+      {statsData.map((item) => (
+        <StatCard
+          key={item.id}
+          title={item.title}
+          value={item.value}
+        />
+      ))}
+    </div>
+
+    {/* Quick Actions */}
+    <QuickAction />
+
+    <RecentOrder orders={recentOrders} />
+
+    <br />
+
+    <AppointmentList Appointment={appointments} />
+  </div>
+);
 }
 
 export default Dashboard;

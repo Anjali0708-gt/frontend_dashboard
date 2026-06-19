@@ -28,7 +28,11 @@ function Sidebar() {
             <FaShoppingCart /> Orders
           </NavLink>
         </li>
-
+        <li>
+          <NavLink to="/measurements">
+            <FaUser /> Measurements
+          </NavLink>
+        </li>
         <li>
           <NavLink to="/reports">
             <FaChartBar /> Reports

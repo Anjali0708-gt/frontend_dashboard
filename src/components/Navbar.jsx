@@ -28,7 +28,7 @@ function Navbar() {
       {/* RIGHT SIDE - LOGIN ICON */}
       <div className="login-section">
         <button className="login-btn" onClick={handleLogin}>
-          👤 Login
+          👤 Logout
         </button>
       </div>
 

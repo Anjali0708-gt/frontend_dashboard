@@ -1,0 +1,101 @@
+.orders-page {
+  padding: 24px;
+}
+
+.orders-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.orders-header h1 {
+  margin: 0;
+  color: #1f2937;
+  font-size: 28px;
+}
+
+.add-order-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add-order-btn:hover {
+  background: #1d4ed8;
+}
+
+.orders-table-container {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  overflow-x: auto;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.orders-table th {
+  background: #f8fafc;
+  color: #374151;
+  text-align: left;
+  padding: 14px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.orders-table td {
+  padding: 14px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.orders-table tr:hover {
+  background: #f9fafb;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.view-btn,
+.edit-btn,
+.delete-btn {
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+}
+
+.view-btn {
+  background: #10b981;
+}
+
+.view-btn:hover {
+  background: #059669;
+}
+
+.edit-btn {
+  background: #f59e0b;
+}
+
+.edit-btn:hover {
+  background: #d97706;
+}
+
+.delete-btn {
+  background: #ef4444;
+}
+
+.delete-btn:hover {
+  background: #dc2626;
+}

@@ -1,0 +1,37 @@
+.order-details-page {
+  padding: 24px;
+}
+
+.order-details-card {
+  max-width: 700px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.order-details-card h1 {
+  margin-bottom: 25px;
+  color: #1f2937;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.detail-row span:first-child {
+  font-weight: 600;
+  color: #374151;
+}
+
+.detail-row span:last-child {
+  color: #6b7280;
+}

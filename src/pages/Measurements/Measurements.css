@@ -1,0 +1,130 @@
+.measurements-page {
+  padding: 24px;
+  background: #f3f4f6;
+  min-height: 100vh;
+}
+
+/* Header */
+.measurements-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.measurements-header h1 {
+  font-size: 28px;
+  color: #111827;
+}
+
+/* Add Button */
+.add-measurement-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add-measurement-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+/* Table Container */
+.measurements-table-container {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  overflow-x: auto;
+}
+
+/* Table */
+.measurements-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.measurements-table thead {
+  background: #f9fafb;
+}
+
+.measurements-table th {
+  text-align: left;
+  padding: 12px;
+  font-size: 14px;
+  color: #374151;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.measurements-table td {
+  padding: 12px;
+  font-size: 14px;
+  color: #111827;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+/* Row Hover */
+.measurements-table tbody tr:hover {
+  background: #f9fafb;
+  transition: 0.2s;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.view-btn,
+.edit-btn,
+.delete-btn {
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* View */
+.view-btn {
+  background: #3b82f6;
+  color: white;
+}
+
+.view-btn:hover {
+  background: #2563eb;
+}
+
+/* Edit */
+.edit-btn {
+  background: #f59e0b;
+  color: white;
+}
+
+.edit-btn:hover {
+  background: #d97706;
+}
+
+/* Delete */
+.delete-btn {
+  background: #ef4444;
+  color: white;
+}
+
+.delete-btn:hover {
+  background: #dc2626;
+}
+
+/* Empty State */
+.no-data {
+  text-align: center;
+  margin-top: 20px;
+  color: #6b7280;
+  font-size: 15px;
+}

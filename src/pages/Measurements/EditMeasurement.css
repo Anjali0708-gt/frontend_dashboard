@@ -1,0 +1,80 @@
+.edit-measurement-page {
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit-measurement-card {
+  width: 100%;
+  max-width: 750px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.edit-measurement-card h1 {
+  margin-bottom: 5px;
+  color: #1f2937;
+  font-size: 28px;
+}
+
+.sub-text {
+  margin-bottom: 20px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.measurement-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.form-group input {
+  padding: 12px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #f59e0b;
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.15);
+}
+
+.update-btn {
+  margin-top: 10px;
+  background: #f59e0b;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.update-btn:hover {
+  background: #d97706;
+}
+
+.update-btn:active {
+  transform: scale(0.98);
+}
