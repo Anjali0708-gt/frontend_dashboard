@@ -1,5 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import "./CustomerDetails.css";
 
 function CustomerDetails() {
   const { id } = useParams();
@@ -26,32 +27,43 @@ function CustomerDetails() {
   );
 
   if (!customer) {
-    return <h2>Customer Not Found</h2>;
+    return (
+      <div className="customer-not-found">
+        <h2>Customer Not Found</h2>
+      </div>
+    );
   }
 
   return (
-    <div>
-      <h1>Customer Details</h1>
+    <div className="customer-details-page">
+      <div className="customer-details-card">
+        <h1>Customer Details</h1>
 
-      <p>
-        <strong>ID:</strong> {customer.id}
-      </p>
+        <div className="detail-row">
+          <span className="detail-label">ID</span>
+          <span>{customer.id}</span>
+        </div>
 
-      <p>
-        <strong>Name:</strong> {customer.name}
-      </p>
+        <div className="detail-row">
+          <span className="detail-label">Name</span>
+          <span>{customer.name}</span>
+        </div>
 
-      <p>
-        <strong>Phone:</strong> {customer.phone}
-      </p>
+        <div className="detail-row">
+          <span className="detail-label">Phone</span>
+          <span>{customer.phone}</span>
+        </div>
 
-      <p>
-        <strong>Email:</strong> {customer.email}
-      </p>
+        <div className="detail-row">
+          <span className="detail-label">Email</span>
+          <span>{customer.email}</span>
+        </div>
 
-      <p>
-        <strong>Address:</strong> {customer.address}
-      </p>
+        <div className="detail-row">
+          <span className="detail-label">Address</span>
+          <span>{customer.address}</span>
+        </div>
+      </div>
     </div>
   );
 }

@@ -1,35 +1,42 @@
+/* ===== EDIT MEASUREMENT PAGE ===== */
 .edit-measurement-page {
-  padding: 24px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  padding-top: 20px;
+  animation: fadeInUp 0.35s ease-out;
 }
 
 .edit-measurement-card {
   width: 100%;
   max-width: 750px;
-  background: #ffffff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  background: var(--surface-card);
+  padding: 36px 40px;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--gray-100);
 }
 
 .edit-measurement-card h1 {
-  margin-bottom: 5px;
-  color: #1f2937;
-  font-size: 28px;
+  margin-bottom: 4px;
+  color: var(--gray-900);
+  font-size: var(--font-size-2xl);
+  font-weight: 800;
 }
 
+/* Subtitle */
 .sub-text {
-  margin-bottom: 20px;
-  color: #6b7280;
-  font-size: 14px;
+  margin-bottom: 24px;
+  color: var(--gray-500);
+  font-size: var(--font-size-sm);
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--gray-100);
 }
 
+/* ===== FORM ===== */
 .measurement-form {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 20px;
 }
 
 .form-group {
@@ -39,42 +46,50 @@
 
 .form-group label {
   margin-bottom: 8px;
-  font-size: 14px;
+  font-size: var(--font-size-sm);
   font-weight: 600;
-  color: #374151;
+  color: var(--gray-700);
+  letter-spacing: 0.2px;
 }
 
 .form-group input {
-  padding: 12px 14px;
-  border: 1px solid #d1d5db;
-  border-radius: 8px;
-  font-size: 15px;
-  transition: 0.3s;
+  padding: 13px 16px;
+  border: 2px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-base);
+  transition: all var(--transition-base);
+  background: var(--gray-50);
+  color: var(--gray-800);
 }
 
 .form-group input:focus {
   outline: none;
-  border-color: #f59e0b;
-  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.15);
+  border-color: var(--accent-400);
+  background: var(--white);
+  box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.1);
 }
 
+/* ===== UPDATE BUTTON ===== */
 .update-btn {
-  margin-top: 10px;
-  background: #f59e0b;
-  color: white;
+  margin-top: 8px;
+  background: linear-gradient(135deg, var(--accent-500), var(--accent-400));
+  color: var(--white);
   border: none;
-  padding: 12px 18px;
-  border-radius: 8px;
-  font-size: 15px;
-  font-weight: 600;
+  padding: 14px 24px;
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-md);
+  font-weight: 700;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all var(--transition-base);
+  box-shadow: 0 2px 10px rgba(245, 158, 11, 0.2);
+  letter-spacing: 0.3px;
 }
 
 .update-btn:hover {
-  background: #d97706;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(245, 158, 11, 0.3);
 }
 
 .update-btn:active {
-  transform: scale(0.98);
+  transform: translateY(0);
 }

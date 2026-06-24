@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
+import "../Customers/AddCustomer.css";
 
 function EditCustomer() {
   const { id } = useParams();
@@ -32,45 +33,49 @@ function EditCustomer() {
   };
 
   return (
-    <div>
-      <h1>Edit Customer</h1>
-      <p>Customer ID: {id}</p>
+    <div className="add-customer-page">
+      <div className="add-customer-card">
+        <h1>Edit Customer</h1>
+        <p style={{ marginBottom: '20px', color: 'var(--gray-500)', fontSize: 'var(--font-size-sm)' }}>
+          Customer ID: {id}
+        </p>
 
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Name</label>
-          <input
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-          />
-        </div>
+        <form className="customer-form" onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label>Name</label>
+            <input
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+            />
+          </div>
 
-        <div>
-          <label>Phone</label>
-          <input
-            type="text"
-            name="phone"
-            value={formData.phone}
-            onChange={handleChange}
-          />
-        </div>
+          <div className="form-group">
+            <label>Phone</label>
+            <input
+              type="text"
+              name="phone"
+              value={formData.phone}
+              onChange={handleChange}
+            />
+          </div>
 
-        <div>
-          <label>Address</label>
-          <input
-            type="text"
-            name="address"
-            value={formData.address}
-            onChange={handleChange}
-          />
-        </div>
+          <div className="form-group">
+            <label>Address</label>
+            <input
+              type="text"
+              name="address"
+              value={formData.address}
+              onChange={handleChange}
+            />
+          </div>
 
-        <button type="submit">
-          Update Customer
-        </button>
-      </form>
+          <button type="submit" className="save-btn">
+            Update Customer
+          </button>
+        </form>
+      </div>
     </div>
   );
 }

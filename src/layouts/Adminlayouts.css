@@ -1,33 +1,42 @@
+/* ===== ADMIN LAYOUT ===== */
 .admin-container {
   display: flex;
+  min-height: 100vh;
+  background: var(--surface-bg);
+}
+
+/* Sidebar wrapper */
+.admin-container > .sidebar {
+  width: 260px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
   height: 100vh;
+  z-index: 100;
 }
 
-/* LEFT SIDEBAR */
-.sidebar {
-  width: 250px;
-  background: #111;
-  color: white;
-}
-
-/* RIGHT SIDE */
+/* Main content area */
 .main-content {
   flex: 1;
   display: flex;
   flex-direction: column;
+  min-width: 0;
+  overflow-x: hidden;
 }
 
-/* TOP NAVBAR */
-.navbar {
-  height: 60px;
-  background: #222;
-  color: white;
-}
-
-/* PAGE AREA */
+/* Page content area below navbar */
 .page-content {
   flex: 1;
-  padding: 20px;
-  background: #f5f5f5;
-  overflow-y: auto;
+  padding: 28px 32px;
+  animation: fadeInUp 0.35s var(--transition-base);
+}
+
+@media (max-width: 768px) {
+  .admin-container > .sidebar {
+    width: 220px;
+  }
+
+  .page-content {
+    padding: 20px 16px;
+  }
 }

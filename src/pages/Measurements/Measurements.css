@@ -1,80 +1,106 @@
+/* ===== MEASUREMENTS LIST PAGE ===== */
 .measurements-page {
-  padding: 24px;
-  background: #f3f4f6;
-  min-height: 100vh;
+  animation: fadeInUp 0.35s ease-out;
 }
 
-/* Header */
+/* ===== HEADER ===== */
 .measurements-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .measurements-header h1 {
-  font-size: 28px;
-  color: #111827;
+  font-size: var(--font-size-2xl);
+  color: var(--gray-900);
+  font-weight: 800;
+  margin: 0;
 }
 
 /* Add Button */
 .add-measurement-btn {
-  background: #2563eb;
-  color: white;
+  background: linear-gradient(135deg, var(--primary-500), var(--primary-600));
+  color: var(--white);
   border: none;
-  padding: 10px 16px;
-  border-radius: 8px;
+  padding: 11px 22px;
+  border-radius: var(--radius-md);
   font-weight: 600;
+  font-size: var(--font-size-sm);
   cursor: pointer;
-  transition: 0.3s;
+  transition: all var(--transition-base);
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.2);
 }
 
 .add-measurement-btn:hover {
-  background: #1d4ed8;
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.3);
 }
 
-/* Table Container */
+.add-measurement-btn:active {
+  transform: translateY(0);
+}
+
+/* ===== TABLE CONTAINER ===== */
 .measurements-table-container {
-  background: #ffffff;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  background: var(--surface-card);
+  padding: 4px;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
   overflow-x: auto;
+  border: 1px solid var(--gray-100);
 }
 
-/* Table */
+/* ===== TABLE ===== */
 .measurements-table {
   width: 100%;
   border-collapse: collapse;
 }
 
 .measurements-table thead {
-  background: #f9fafb;
+  background: var(--gray-50);
 }
 
 .measurements-table th {
   text-align: left;
-  padding: 12px;
-  font-size: 14px;
-  color: #374151;
-  border-bottom: 1px solid #e5e7eb;
+  padding: 14px 20px;
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--gray-500);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid var(--gray-200);
+}
+
+.measurements-table th:first-child {
+  border-radius: var(--radius-lg) 0 0 0;
+}
+
+.measurements-table th:last-child {
+  border-radius: 0 var(--radius-lg) 0 0;
 }
 
 .measurements-table td {
-  padding: 12px;
-  font-size: 14px;
-  color: #111827;
-  border-bottom: 1px solid #f3f4f6;
+  padding: 16px 20px;
+  font-size: var(--font-size-base);
+  color: var(--gray-700);
+  border-bottom: 1px solid var(--gray-100);
 }
 
 /* Row Hover */
-.measurements-table tbody tr:hover {
-  background: #f9fafb;
-  transition: 0.2s;
+.measurements-table tbody tr {
+  transition: background var(--transition-fast);
 }
 
-/* Action Buttons */
+.measurements-table tbody tr:hover {
+  background: var(--primary-50);
+}
+
+.measurements-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* ===== ACTION BUTTONS ===== */
 .action-buttons {
   display: flex;
   gap: 8px;
@@ -83,48 +109,57 @@
 .view-btn,
 .edit-btn,
 .delete-btn {
-  padding: 6px 10px;
-  border-radius: 6px;
-  font-size: 13px;
+  padding: 7px 16px;
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
   border: none;
   cursor: pointer;
-  transition: 0.2s;
+  transition: all var(--transition-base);
+  letter-spacing: 0.3px;
 }
 
 /* View */
 .view-btn {
-  background: #3b82f6;
-  color: white;
+  background: var(--success-100);
+  color: var(--success-600);
 }
 
 .view-btn:hover {
-  background: #2563eb;
+  background: var(--success-500);
+  color: var(--white);
+  transform: translateY(-1px);
 }
 
 /* Edit */
 .edit-btn {
-  background: #f59e0b;
-  color: white;
+  background: var(--warning-100);
+  color: var(--warning-600);
 }
 
 .edit-btn:hover {
-  background: #d97706;
+  background: var(--warning-500);
+  color: var(--white);
+  transform: translateY(-1px);
 }
 
 /* Delete */
 .delete-btn {
-  background: #ef4444;
-  color: white;
+  background: var(--danger-100);
+  color: var(--danger-500);
 }
 
 .delete-btn:hover {
-  background: #dc2626;
+  background: var(--danger-500);
+  color: var(--white);
+  transform: translateY(-1px);
 }
 
-/* Empty State */
+/* ===== EMPTY STATE ===== */
 .no-data {
   text-align: center;
-  margin-top: 20px;
-  color: #6b7280;
-  font-size: 15px;
+  padding: 40px 20px;
+  color: var(--gray-400);
+  font-size: var(--font-size-md);
+  font-weight: 500;
 }

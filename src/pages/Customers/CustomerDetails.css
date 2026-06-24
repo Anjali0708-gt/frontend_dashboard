@@ -1,26 +1,44 @@
+/* ===== CUSTOMER DETAILS PAGE ===== */
 .customer-details-page {
-  padding: 25px;
+  animation: fadeInUp 0.35s ease-out;
 }
 
 .customer-details-card {
-  background: #ffffff;
-  max-width: 700px;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  background: var(--surface-card);
+  max-width: 720px;
+  padding: 36px 40px;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--gray-100);
 }
 
 .customer-details-card h1 {
-  margin-bottom: 25px;
-  color: #1f2937;
+  margin-bottom: 24px;
+  color: var(--gray-900);
+  font-size: var(--font-size-2xl);
+  font-weight: 800;
+  position: relative;
+  padding-bottom: 16px;
 }
 
+.customer-details-card h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-500), var(--accent-400));
+  border-radius: var(--radius-full);
+}
+
+/* Detail rows */
 .detail-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 14px 0;
-  border-bottom: 1px solid #e5e7eb;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--gray-100);
 }
 
 .detail-row:last-child {
@@ -29,18 +47,22 @@
 
 .detail-label {
   font-weight: 600;
-  color: #374151;
+  color: var(--gray-700);
+  font-size: var(--font-size-base);
 }
 
 .detail-row span:last-child {
-  color: #6b7280;
+  color: var(--gray-500);
+  font-size: var(--font-size-base);
 }
 
+/* Not found state */
 .customer-not-found {
-  padding: 30px;
+  padding: 40px;
   text-align: center;
 }
 
 .customer-not-found h2 {
-  color: #ef4444;
+  color: var(--danger-500);
+  font-size: var(--font-size-xl);
 }

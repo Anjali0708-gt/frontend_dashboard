@@ -1,65 +1,102 @@
+/* ===== ORDERS LIST PAGE ===== */
 .orders-page {
-  padding: 24px;
+  animation: fadeInUp 0.35s ease-out;
 }
 
+/* ===== HEADER ===== */
 .orders-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 25px;
+  margin-bottom: 24px;
 }
 
 .orders-header h1 {
   margin: 0;
-  color: #1f2937;
-  font-size: 28px;
+  color: var(--gray-900);
+  font-size: var(--font-size-2xl);
+  font-weight: 800;
 }
 
+/* Add Order Button */
 .add-order-btn {
-  background: #2563eb;
-  color: white;
+  background: linear-gradient(135deg, var(--primary-500), var(--primary-600));
+  color: var(--white);
   border: none;
-  padding: 12px 18px;
-  border-radius: 8px;
+  padding: 11px 22px;
+  border-radius: var(--radius-md);
   font-weight: 600;
+  font-size: var(--font-size-sm);
   cursor: pointer;
-  transition: 0.3s;
+  transition: all var(--transition-base);
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.2);
 }
 
 .add-order-btn:hover {
-  background: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.3);
 }
 
+.add-order-btn:active {
+  transform: translateY(0);
+}
+
+/* ===== TABLE CONTAINER ===== */
 .orders-table-container {
-  background: #ffffff;
-  padding: 20px;
-  border-radius: 12px;
+  background: var(--surface-card);
+  padding: 4px;
+  border-radius: var(--radius-xl);
   overflow-x: auto;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--gray-100);
 }
 
+/* ===== TABLE ===== */
 .orders-table {
   width: 100%;
   border-collapse: collapse;
 }
 
 .orders-table th {
-  background: #f8fafc;
-  color: #374151;
+  background: var(--gray-50);
+  color: var(--gray-500);
   text-align: left;
-  padding: 14px;
-  border-bottom: 2px solid #e5e7eb;
+  padding: 14px 20px;
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid var(--gray-200);
+}
+
+.orders-table th:first-child {
+  border-radius: var(--radius-lg) 0 0 0;
+}
+
+.orders-table th:last-child {
+  border-radius: 0 var(--radius-lg) 0 0;
 }
 
 .orders-table td {
-  padding: 14px;
-  border-bottom: 1px solid #e5e7eb;
+  padding: 16px 20px;
+  font-size: var(--font-size-base);
+  color: var(--gray-700);
+  border-bottom: 1px solid var(--gray-100);
 }
 
-.orders-table tr:hover {
-  background: #f9fafb;
+.orders-table tbody tr {
+  transition: background var(--transition-fast);
 }
 
+.orders-table tbody tr:hover {
+  background: var(--primary-50);
+}
+
+.orders-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* ===== ACTION BUTTONS ===== */
 .action-buttons {
   display: flex;
   gap: 8px;
@@ -69,33 +106,53 @@
 .edit-btn,
 .delete-btn {
   border: none;
-  padding: 8px 14px;
-  border-radius: 6px;
+  padding: 7px 16px;
+  border-radius: var(--radius-sm);
   cursor: pointer;
-  color: white;
-  font-weight: 500;
+  font-weight: 600;
+  font-size: var(--font-size-xs);
+  transition: all var(--transition-base);
+  letter-spacing: 0.3px;
 }
 
 .view-btn {
-  background: #10b981;
+  background: var(--success-100);
+  color: var(--success-600);
 }
 
 .view-btn:hover {
-  background: #059669;
+  background: var(--success-500);
+  color: var(--white);
+  transform: translateY(-1px);
 }
 
 .edit-btn {
-  background: #f59e0b;
+  background: var(--warning-100);
+  color: var(--warning-600);
 }
 
 .edit-btn:hover {
-  background: #d97706;
+  background: var(--warning-500);
+  color: var(--white);
+  transform: translateY(-1px);
 }
 
 .delete-btn {
-  background: #ef4444;
+  background: var(--danger-100);
+  color: var(--danger-500);
 }
 
 .delete-btn:hover {
-  background: #dc2626;
+  background: var(--danger-500);
+  color: var(--white);
+  transform: translateY(-1px);
+}
+
+/* ===== EMPTY STATE ===== */
+.no-orders {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--gray-400);
+  font-size: var(--font-size-md);
+  font-weight: 500;
 }

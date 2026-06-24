@@ -18,12 +18,6 @@ function Navbar() {
       </div>
 
       {/* CENTER MENU */}
-      <ul className="nav-links">
-        <li>Home</li>
-        <li>Services</li>
-        <li>About</li>
-        <li>Gallery</li>
-      </ul>
 
       {/* RIGHT SIDE - LOGIN ICON */}
       <div className="login-section">
